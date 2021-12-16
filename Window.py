@@ -219,8 +219,8 @@ class MainWindow(QtWidgets.QWidget, window.Ui_Form):
         ProbPuass = 0
         l = 0
         while ProbPuass < p_prob:
-            a = round(self.param_lambda - (l / 9))
-            b = round(self.param_lambda + ((5 * l) / 2))
+            a = round(self.param_lambda - (l / 3))
+            b = round(self.param_lambda + ((11 * l) / 8))
             ProbPuass = 0
             if a < 0:
                 a = 0
@@ -229,8 +229,8 @@ class MainWindow(QtWidgets.QWidget, window.Ui_Form):
             l += 0.1
 
         self.l4_p2.setText(f'{l:.4f}')
-        self.int4_left_p2.setText(f'{self.sampAverPuass - (l / 9):.4f}')
-        self.int4_right_p2.setText(f'{self.sampAverPuass + ((5 * l) / 2):.4f}')
+        self.int4_left_p2.setText(f'{self.sampAverPuass - (l / 3):.4f}')
+        self.int4_right_p2.setText(f'{self.sampAverPuass + ((11 * l) / 8):.4f}')
 
         # №5
         leftDistrD, rightDistrD, lDistrD = pf.getProbInterval(p_prob, self.sampAverDistr, self.distr_values)

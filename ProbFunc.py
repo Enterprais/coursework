@@ -78,8 +78,8 @@ def getProbInterval(p, avr, samples):
     left = 0
     right = 0
     while p - p_now > 0:
-        left = avr - l / 9
-        right = avr + (5 * l / 2)
+        left = avr - l / 3
+        right = avr + (11 * l / 8)
         if left < 0:
             left = 0
         t = 0
